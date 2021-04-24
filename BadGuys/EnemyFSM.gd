@@ -1,6 +1,7 @@
 extends "res://Player/StateMachine.gd"
 
 
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -10,25 +11,21 @@ extends "res://Player/StateMachine.gd"
 func _ready():
 	add_state("idle")
 	add_state("shoot")
-	add_state("dodge")
-	add_state("dash")
+	add_state("hunt")
+	add_state("hid")
 	add_state("hit")
 	#call_deferred("set_state",states.idle)
  
 				
 func _state_logic(_delta):
-	match state:
-		states.dodge:
-			parent.reduce_Stamina(-5)
-		states.dash:
-			parent.reduce_Stamina(-10)
+	if state==states.hunt:
+		parent.FinedPlayer()
+	
 	
 
 func _get_transition(_delta): 
-	if state == states.dodge && parent.Is_Stamina_empty():
-		return states.idle
-	if state == states.dash && parent.Is_Stamina_empty():
-		return states.idle
+	if state==states.hunt: #and !parent.is_in_Range()
+		return states.shoot
 	return null 
 
 func _enter_state(new_state,old_state):

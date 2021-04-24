@@ -1,20 +1,31 @@
 extends Node2D
 
-onready var Heath:TextureProgress = $Heath
-onready var Stamana:TextureProgress = $Stamana
+onready var Health:TextureProgress = $Heath
+onready var Stamina:TextureProgress = $Stamina
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
-func setHelth(NewHeath:int):
-	Heath.value = NewHeath
+func setHealth(NewHealth:int,MaxHealth:int)->void:
+	Health.value = NewHealth
+	Health.max_value=MaxHealth
 
-func setStamana(NewSamana:int):
-	Stamana.value = NewSamana
+func setStamina(NewStamina:int,MaxStamina:int)->void:
+	Stamina.value = NewStamina
+	Stamina.max_value=MaxStamina
 
+
+func PlayerDataChange():
+	Health.value = PlayerDb.PlayerHealth
+	Health.max_value=PlayerDb.PlayerMaxHealth
+	Stamina.value = PlayerDb.PlayerStamina
+	Stamina.max_value=PlayerDb.PlayerMaxStamina
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var _x = PlayerDb.connect("HealthChange",self,"setHealth")
+	var _y = PlayerDb.connect("StaminaChange",self,"setStamina")
+	var _s = PlayerDb.connect("PlayerDataChange",self,"PlayerDataChange")
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

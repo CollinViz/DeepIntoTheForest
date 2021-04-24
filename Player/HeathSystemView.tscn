@@ -18,7 +18,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Stamana" type="TextureProgress" parent="."]
+[node name="Stamina" type="TextureProgress" parent="."]
 modulate = Color( 0.984314, 0.745098, 0, 1 )
 margin_left = -0.25
 margin_top = 7.25

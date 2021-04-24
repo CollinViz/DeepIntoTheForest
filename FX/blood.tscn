@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://FX/blood.png" type="Texture" id=1]
+[ext_resource path="res://FX/blood.gd" type="Script" id=2]
+
+[node name="blood" type="CPUParticles2D"]
+z_index = 8
+amount = 10
+lifetime = 0.2
+explosiveness = 1.0
+texture = ExtResource( 1 )
+spread = 18.9
+gravity = Vector2( 0, 0 )
+initial_velocity = 600.0
+initial_velocity_random = 1.0
+scale_amount = 0.15
+scale_amount_random = 0.25
+script = ExtResource( 2 )
+
+[node name="frezz" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+autostart = true
+
+[node name="disapar" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="frezz" to="." method="_on_frezz_timeout"]
+[connection signal="timeout" from="disapar" to="." method="_on_disapar_timeout"]
