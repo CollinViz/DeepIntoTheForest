@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (0767f8302a, 2020-10-17)"
+   sodipodi:docname="base.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="524.76749"
+     inkscape:cy="62.296725"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:window-width="1832"
+     inkscape:window-height="1003"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#ffffff;stroke-width:0.959107"
+       id="path835"
+       cx="35.20245"
+       cy="13.850973"
+       r="8.4666662"
+       inkscape:export-xdpi="403.871"
+       inkscape:export-ydpi="403.871" />
+    <rect
+       style="fill:#ffffff;stroke-width:1.46316"
+       id="rect837"
+       width="16.933332"
+       height="16.933332"
+       x="46.599831"
+       y="5.3843069"
+       inkscape:export-xdpi="403.871"
+       inkscape:export-ydpi="403.871" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;stroke-width:1.633"
+       id="path839"
+       sodipodi:sides="5"
+       sodipodi:cx="32.217659"
+       sodipodi:cy="129.10249"
+       sodipodi:r1="19.220135"
+       sodipodi:r2="9.6100674"
+       sodipodi:arg1="1.1303507"
+       sodipodi:arg2="1.7586692"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 40.412021,146.48829 -9.989231,-7.94483 -12.207811,3.72484 4.469143,-11.95541 -7.314958,-10.45928 12.751314,0.55598 7.686919,-10.18903 3.411602,12.29903 12.065735,4.16211 -10.642828,7.04523 z"
+       inkscape:transform-center-x="-0.5230034"
+       inkscape:transform-center-y="-0.34927164"
+       transform="matrix(0.47147612,0,0,0.46689806,59.217687,-46.07746)"
+       inkscape:export-xdpi="403.871"
+       inkscape:export-ydpi="403.871" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;stroke-width:1.633"
+       id="path841"
+       sodipodi:sides="5"
+       sodipodi:cx="25.033381"
+       sodipodi:cy="78.573586"
+       sodipodi:r1="20.909647"
+       sodipodi:r2="10.454823"
+       sodipodi:arg1="0.98132063"
+       sodipodi:arg2="1.6096392"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 36.657582,95.954359 12.095359,94.999812 5.4130418,71.344779 25.845366,57.67971 45.155554,72.889267 Z"
+       inkscape:transform-center-x="0.0061562868"
+       inkscape:transform-center-y="-0.89160536"
+       transform="matrix(0.42539655,-0.01704995,0.01748523,0.44723288,3.201608,-19.977744)"
+       inkscape:export-xdpi="403.871"
+       inkscape:export-ydpi="403.871" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;stroke-width:1.633"
+       id="path843"
+       sodipodi:sides="6"
+       sodipodi:cx="138.40062"
+       sodipodi:cy="20.276144"
+       sodipodi:r1="18.33791"
+       sodipodi:r2="16.942017"
+       sodipodi:arg1="2.3426129"
+       sodipodi:arg2="2.8662117"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 125.61106,33.417914 -4.98633,-17.646968 12.78956,-13.1417699 17.77589,4.5051984 4.98633,17.6469675 -12.78956,13.14177 z"
+       transform="matrix(0.47630069,0,0,0.47978025,28.874285,4.1228796)"
+       inkscape:export-xdpi="403.871"
+       inkscape:export-ydpi="403.871" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;stroke-width:1.633"
+       id="path845"
+       sodipodi:sides="6"
+       sodipodi:cx="116.38524"
+       sodipodi:cy="71.452248"
+       sodipodi:r1="25.786833"
+       sodipodi:r2="22.33205"
+       sodipodi:arg1="0.97050155"
+       sodipodi:arg2="1.4941003"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 130.95185,92.730746 105.24083,94.706555 90.674211,73.428056 101.81862,50.173749 127.52965,48.19794 142.09627,69.476439 Z"
+       transform="matrix(0.32930099,0,0,0.36409026,76.332871,-12.164094)"
+       inkscape:export-xdpi="403.871"
+       inkscape:export-ydpi="403.871" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;stroke-width:1.633"
+       id="path849"
+       sodipodi:sides="6"
+       sodipodi:cx="107.63875"
+       sodipodi:cy="173.95758"
+       sodipodi:r1="20.260307"
+       sodipodi:r2="10.130154"
+       sodipodi:arg1="0.97386202"
+       sodipodi:arg2="1.4974608"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 119.02726,190.71413 -10.64628,-6.65362 -9.559569,8.13809 0.439064,-12.54676 -11.827578,-4.20979 11.085344,-5.89314 -2.268006,-12.34788 10.646275,6.65363 9.55958,-8.13809 -0.43907,12.54675 11.82758,4.20979 -11.08534,5.89314 z"
+       inkscape:transform-center-y="-1.1532628e-06"
+       transform="matrix(0.41902055,0,0,0.46415547,89.419836,-66.89239)"
+       inkscape:export-xdpi="403.871"
+       inkscape:export-ydpi="403.871" />
+  </g>
+</svg>
