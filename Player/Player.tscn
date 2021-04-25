@@ -18,6 +18,8 @@ extents = Vector2( 20.5036, 20.7661 )
 "player",
 ]]
 z_index = 10
+collision_layer = 2
+collision_mask = 5
 script = ExtResource( 2 )
 Bullet = ExtResource( 4 )
 

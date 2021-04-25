@@ -1,0 +1,100 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/PlayerLevelUp/PlayerLevelUp.gd" type="Script" id=1]
+
+[node name="PlayerLevelUp" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.66748
+margin_top = -0.66745
+margin_right = -0.66748
+margin_bottom = -0.66748
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 50.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/CenterContainer"]
+margin_left = 387.0
+margin_right = 637.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 250, 50 )
+bbcode_enabled = true
+bbcode_text = "
+[center]Level Up[/center]"
+text = "
+Level Up"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 54.0
+margin_right = 1024.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 50, 150 )
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 208.0
+margin_right = 1024.0
+margin_bottom = 412.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/CenterContainer2"]
+margin_left = 206.0
+margin_right = 818.0
+margin_bottom = 204.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_right = 612.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+bbcode_enabled = true
+bbcode_text = "
+[center]Select Upgrade[/center]"
+text = "
+Select Upgrade"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 54.0
+margin_right = 612.0
+margin_bottom = 204.0
+
+[node name="Health" type="Button" parent="VBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer"]
+margin_right = 150.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+text = "+Health"
+
+[node name="Speed" type="Button" parent="VBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 154.0
+margin_right = 304.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+text = "+ Movment"
+
+[node name="DPS" type="Button" parent="VBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 308.0
+margin_right = 458.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+text = "+ Attack"
+
+[node name="Shelld" type="Button" parent="VBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 462.0
+margin_right = 612.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+text = "+Block"
+
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer/Health" to="." method="_on_Health_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer/Speed" to="." method="_on_Speed_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer/DPS" to="." method="_on_DPS_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer/Shelld" to="." method="_on_Shelld_pressed"]

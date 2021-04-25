@@ -83,9 +83,10 @@ func shoot():
 	var b = Bullet.instance()
 	b.setDamage(PlayerDb.PlayerBaseDamage,2,"pop",1250) 
 	b.transform = target.transform.scaled(Vector2(0.15,0.15)) 
-	b.position = muzzel2.position
+	b.global_position = muzzel2.global_position
 	 
-	add_child(b)
+	#add_child(b)
+	get_parent().BulletPlayer.add_child(b)
 
 
 func _on_Timer_timeout():
@@ -128,5 +129,5 @@ func _on_Regen_timeout():
 	#PlayerDb.addHealth(1)
 
 
-func _on_PlayerBod_body_entered(body):
+func _on_PlayerBod_body_entered(_body):
 	pass # Replace with function body.

@@ -14,12 +14,19 @@ export var PlayerBaseBlock:int = 1
 
 export var PlayerGold:int = 0
 export var PlayerXP:int = 0
+export var PlayerXPNextLevel:int = 0
+export var PlayerLevel:int = 0
+export(Array) var PlayerProgression = [5,10,25,50,75,100,10000000]
+export(Array) var PlayerProgressionUpgrade = [{"health":true,"Speed":true},{"DPS":true,"Shelled":true},{"health":true,"DPS":true,"Shelled":true},{"health":true,"DPS":true,"Shelled":true,"Speed":true}]
+
+var _playerNode:Node = null
 
 signal HealthChange(HealthVal,TotalHealth)
 signal StaminaChange(StaminaVal,TotalStamina)
 signal PlayerDataChange()
 signal PlayerGoldChange(GoldVal)
-signal PlayerXPChange(XpVal)
+signal PlayerXPChange(XpVal,nexLevel)
+signal PlayerLevelChange(XpVal,nexLevel)
 signal PlayerDied()
 
 # Called when the node enters the scene tree for the first time.
@@ -60,9 +67,22 @@ func addGold(NewGold:int)->void:
 func addXP(NewXP:int)->void:
 	PlayerXP=PlayerXP+NewXP
 	print("Your Xp is %d" % PlayerXP)
-	emit_signal("PlayerXPChange",PlayerGold)
-	
-func reset():
+	emit_signal("PlayerXPChange",PlayerXP,PlayerXPNextLevel)
+
+func LevelUp():
+	PlayerHealth = PlayerMaxHealth
+	PlayerLevel+=1
+	PlayerXPNextLevel = PlayerProgression[PlayerLevel]
+	emit_signal("PlayerLevelChange",PlayerLevel,PlayerXPNextLevel)
+
+
+func ShouldLevelUp() ->bool:
+	return PlayerXP>=PlayerXPNextLevel
+
+func getNextLevelOptions()->Array:
+	return PlayerProgressionUpgrade[PlayerLevel+1]
+
+func resetData(PlayerNode:Node):
 	PlayerMaxHealth  = 50
 	PlayerHealth = PlayerMaxHealth
 	PlayerMaxStamina  = 50
@@ -74,7 +94,13 @@ func reset():
 	PlayerBaseBlock = 1
 	PlayerGold=0
 	PlayerXP =0
+	addXP(0)
+	addGold(0)
 	emit_signal("PlayerDataChange")
+	_playerNode = PlayerNode
+	PlayerLevel = 0
+	PlayerXPNextLevel = PlayerProgression[PlayerLevel]
+	emit_signal("PlayerLevelChange",PlayerLevel,PlayerXPNextLevel)
 	
 func takeItem(ItemType:String)->void:
 	match ItemType:
@@ -112,3 +138,9 @@ func takeItem(ItemType:String)->void:
 		"ShotsCoolL3":
 			PlayerShotsCoolDownSec = 0.05
 			emit_signal("PlayerDataChange")
+
+
+
+
+func getPlayerNode()->Node:
+	return _playerNode

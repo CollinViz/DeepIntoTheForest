@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://BadGuys/BaseBadGuy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Items/ItemSence/Gold.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Leveles/BaseLevel/baseLevel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Items/ItemSence/XP.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 47.6512, 52.35 )
+
+[node name="RoomLR" instance=ExtResource( 3 )]
+
+[node name="back" parent="." index="1"]
+tile_data = PoolIntArray( -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -131057, 0, 0, -131056, 0, 0, -131055, 0, 0, -131054, 0, 0, -131053, 0, 0, -1, 0, 0, -65517, 0, 0, 65535, 0, 0, 19, 0, 0, 131071, 0, 0, 65555, 0, 0, 196607, 0, 0, 131091, 0, 0, 262143, 0, 0, 196627, 0, 0, 327679, 1, 0, 262163, 1, 0, 393215, 0, 0, 327699, 0, 0, 458751, 0, 0, 393235, 0, 0, 524287, 0, 0, 458771, 0, 0, 589823, 0, 0, 524307, 0, 0, 655359, 0, 0, 589843, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0 )
+
+[node name="Enemy" parent="EnemySpawn" index="0" instance=ExtResource( 1 )]
+position = Vector2( 1169.21, 589.643 )
+ItemsList = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 4 ) ]
+
+[node name="Enemy2" parent="EnemySpawn" index="1" instance=ExtResource( 1 )]
+position = Vector2( 1174.25, 249.464 )
+ItemsList = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 4 ) ]
+EnemyAIType = 2
+
+[node name="Enemy3" parent="EnemySpawn" index="2" instance=ExtResource( 1 )]
+position = Vector2( 52.9167, 299.861 )
+ItemsList = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 4 ) ]
+EnemyAIType = 3
+
+[node name="CollisionShape2D" parent="Doors" index="0" groups=[
+"door1",
+]]
+position = Vector2( -40.181, 284.742 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Doors" index="1" groups=[
+"door2",
+]]
+position = Vector2( 1247.8, 286.989 )
+shape = SubResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="9"]
+margin_left = 469.147
+margin_top = 192.373
+margin_right = 730.147
+margin_bottom = 232.373
+text = "Room Left Right
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}

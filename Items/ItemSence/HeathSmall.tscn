@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Items/ItemBase.tscn" type="PackedScene" id=1]
+
+[node name="HeathSmall" instance=ExtResource( 1 )]
+ItemType = "Helth20"
+
+[node name="Sprite" parent="." index="0"]
+modulate = Color( 0.627451, 0.0352941, 0.0352941, 1 )

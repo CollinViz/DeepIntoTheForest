@@ -32,12 +32,12 @@ func _get_transition(_delta):
 	return null 
 
 func _enter_state(new_state,old_state):
-	print("_enter_state new ",_stateName(new_state)," old ",_stateName(old_state))
-	 
+	print("Player _enter_state new ",_stateName(new_state)," old ",_stateName(old_state))
+	pass 
 	 
 
 func _exit_state(old_state,new_state):
-	print("_exit_state old ",_stateName(old_state)," new ",_stateName(new_state))
+	print("Player _exit_state old ",_stateName(old_state)," new ",_stateName(new_state))
 	 
 	pass
 

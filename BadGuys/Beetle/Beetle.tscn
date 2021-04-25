@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://BadGuys/BaseBadGuy.tscn" type="PackedScene" id=1]
+
+[node name="Beetle" instance=ExtResource( 1 )]
+Attack = 10
+AttackTimer = 0.5
+predict_time = 2.0
+linear_speed_max = 500
+linear_accel_max = 250
+arrival_tolerance = 25.0
+reHuntTimer = 5.0
+EnemyAIType = 2

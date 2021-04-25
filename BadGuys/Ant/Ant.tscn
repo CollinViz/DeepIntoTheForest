@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://BadGuys/BaseBadGuy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BadGuys/Ant/RV purple ant.png" type="Texture" id=2]
+
+[node name="Ant" instance=ExtResource( 1 )]
+Attack = 5
+AttackTimer = 1.5
+MaxHP = 5
+linear_speed_max = 150
+linear_accel_max = 150
+use_seek = true
+
+[node name="Sprite" parent="." index="1"]
+modulate = Color( 0.0745098, 0.188235, 0.941176, 1 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
