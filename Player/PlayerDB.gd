@@ -16,7 +16,7 @@ export var PlayerGold:int = 0
 export var PlayerXP:int = 0
 export var PlayerXPNextLevel:int = 0
 export var PlayerLevel:int = 0
-export(Array) var PlayerProgression = [5,10,25,50,75,100,10000000]
+export(Array) var PlayerProgression = [10,25,45,55,75,100,10000000]
 export(Array) var PlayerProgressionUpgrade = [{"health":true,"Speed":true},{"DPS":true,"Shelled":true},{"health":true,"DPS":true,"Shelled":true},{"health":true,"DPS":true,"Shelled":true,"Speed":true}]
 
 var _playerNode:Node = null
@@ -31,7 +31,24 @@ signal PlayerDied()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	PlayerMaxHealth  = 50
+	PlayerHealth = PlayerMaxHealth
+	PlayerMaxStamina  = 50
+	PlayerStamina = PlayerMaxStamina
+
+	PlayerMoveSpeed = 150
+	PlayerShotsCoolDownSec = 0.5
+	PlayerBaseDamage  = 1
+	PlayerBaseBlock = 1
+	PlayerGold=0
+	PlayerXP =0
+	addXP(0)
+	addGold(0)
+	emit_signal("PlayerDataChange")
+	 
+	PlayerLevel = 0
+	PlayerXPNextLevel = PlayerProgression[PlayerLevel]
+	emit_signal("PlayerLevelChange",PlayerLevel,PlayerXPNextLevel)
 
 
 func addHealth(NewHealth:int)->void:
@@ -89,11 +106,11 @@ func resetData(PlayerNode:Node):
 	PlayerMaxStamina  = 50
 	PlayerStamina = PlayerMaxStamina
 
-	PlayerMoveSpeed = 100
+	PlayerMoveSpeed = 150
 	PlayerShotsCoolDownSec = 0.5
 	PlayerBaseDamage  = 1
 	PlayerBaseBlock = 1
-	PlayerGold=1000
+	PlayerGold=0
 	PlayerXP =0
 	addXP(0)
 	addGold(0)

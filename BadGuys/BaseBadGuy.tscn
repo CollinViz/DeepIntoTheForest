@@ -9,7 +9,7 @@
 [ext_resource path="res://Items/ItemSence/XP.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 63.527, 38.9892 )
+extents = Vector2( 60.3091, 33.2766 )
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 229.068
@@ -39,6 +39,7 @@ texture = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="HeathSystem" parent="." instance=ExtResource( 4 )]
+visible = false
 modulate = Color( 0.678431, 0.0470588, 0.0470588, 1 )
 
 [node name="detection" type="Area2D" parent="."]
@@ -59,6 +60,7 @@ shape = SubResource( 3 )
 one_shot = true
 
 [node name="Status" type="RichTextLabel" parent="."]
+visible = false
 margin_left = -59.8615
 margin_top = -10.6106
 margin_right = 59.1385

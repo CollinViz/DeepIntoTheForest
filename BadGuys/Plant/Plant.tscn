@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://BadGuys/BaseBadGuy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BadGuys/Plant/plant.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 46.9243, 66.9426 )
 
 [node name="Plant" instance=ExtResource( 1 )]
 rotate_speed = 0
 spawn_pont_count = 8
 EnemyAIType = 3
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2( 4.23782, -12.7135 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="10"]
+position = Vector2( 2.11893, -9.00542 )
+shape = SubResource( 1 )

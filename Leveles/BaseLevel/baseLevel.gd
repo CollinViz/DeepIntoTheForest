@@ -3,6 +3,8 @@ export(PackedScene) var Blood
 export(PackedScene) var ItemSpawner
 export(bool) var isFirstLevel = false
 export(bool) var clear = false
+export(Rect2) var PlayerView := Rect2(-150,-150,1174,750)
+
 
 onready var fxSpawner = $FXEnemy
 onready var BulletEnemy = $BulletEnemy
@@ -21,7 +23,7 @@ func _ready():
 	Doors.monitorable=false
 	Doors.monitoring = false
 	RoomClearItems.visible = false
-	
+	$Player.PlayerView=PlayerView
 	#clear all enemies if room is clear
 	if clear:
 		for c  in $EnemySpawn.get_children():						

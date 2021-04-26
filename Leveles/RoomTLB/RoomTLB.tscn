@@ -45,13 +45,3 @@ shape = SubResource( 1 )
 ]]
 position = Vector2( 730.763, 680.012 )
 shape = SubResource( 2 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="." index="9"]
-margin_left = 469.147
-margin_top = 192.373
-margin_right = 730.147
-margin_bottom = 232.373
-text = "Room Top left Bottom"
-__meta__ = {
-"_edit_use_anchors_": false
-}

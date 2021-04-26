@@ -5,6 +5,7 @@ export var FireDelayTimeOut:float = 0.1  # speed in pixels/sec
 export var StaminaDelayTimeOut:float = 0.5  # speed in pixels/sec
 export var StaminaRegenDelayTimeOut:float = 0.5  # speed in pixels/sec
 export var IsGunAuto:bool = false
+export(Rect2) var PlayerView := Rect2(-150,-150,1324,700)
 var velocity = Vector2.ZERO
 
 onready var target = $Target
@@ -13,6 +14,7 @@ onready var muzzel2 = $muzzel
 onready var HeathSystem = $HeathSystemView
 onready var FireDelay:Timer = $FireDelay
 onready var StaminaDelay:Timer = $StaminaDelay
+onready var PlayerSprit:=$Sprite
 
 onready var PlayerFSM:StateMachine = $PlayerFSM
 
@@ -22,6 +24,11 @@ func _ready():
 	var _s = PlayerDb.connect("PlayerDataChange",self,"PlayerDataChange")
 	PlayerFSM.set_state(PlayerFSM.states.idle)
 	$Regen.start(StaminaRegenDelayTimeOut)
+	$Camera2D.limit_left = PlayerView.position.x
+	$Camera2D.limit_top = PlayerView.position.y
+	$Camera2D.limit_right = PlayerView.size.x
+	$Camera2D.limit_bottom = PlayerView.size.y
+	
 	 
 func PlayerDataChange():
 	speed = PlayerDb.PlayerMoveSpeed
@@ -43,8 +50,10 @@ func _input(_event):
 func get_input():
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed('right'):
+		PlayerSprit.flip_h=false
 		velocity.x += 1
 	if Input.is_action_pressed('left'):
+		PlayerSprit.flip_h=true
 		velocity.x -= 1
 	if Input.is_action_pressed('down'):
 		velocity.y += 1
@@ -65,7 +74,7 @@ func _physics_process(_delta):
 		FireDelay.start(FireDelayTimeOut)
 		shoot()
 
-
+	 
 	_update_agent()
 
 

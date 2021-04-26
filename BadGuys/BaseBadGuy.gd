@@ -36,14 +36,10 @@ onready var player_agent: GSAISteeringAgent = null #owner.find_node("Player", tr
 func _ready():
 	EnemyFSM.set_state(EnemyFSM.states.idle)
 	$HeathSystem.setMaxHeath(MaxHP)
-	match EnemyAIType:
-		1:
-			$Sprite.modulate = Color("#FF0000")
-		2:
-			$Sprite.modulate = Color("#ff0080")
+	match EnemyAIType:		
 		3:
 			on_ready_shooter()
-			$Sprite.modulate = Color("#00ff80")
+			 
 
 func on_ready_shooter():
 	var step = 2 * PI / spawn_pont_count

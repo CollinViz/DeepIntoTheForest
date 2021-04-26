@@ -1,33 +1,174 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Leveles/BaseLevel/baseLevel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://BadGuys/BaseBadGuy.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Items/ItemSence/Gold.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Items/ItemSence/XP.tscn" type="PackedScene" id=4]
+[ext_resource path="res://BadGuys/Ant/Ant.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Leveles/RoomBStart/top.png" type="Texture" id=3]
+[ext_resource path="res://Leveles/RoomBStart/left.png" type="Texture" id=4]
+[ext_resource path="res://BadGuys/Beetle/Beetle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://BadGuys/Plant/Plant.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Leveles/reddoor.png" type="Texture" id=7]
 
 [node name="RoomL" instance=ExtResource( 1 )]
 
 [node name="back" parent="." index="1"]
-tile_data = PoolIntArray( -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -131057, 0, 0, -131056, 0, 0, -131055, 0, 0, -131054, 0, 0, -131053, 0, 0, -1, 0, 0, -65517, 0, 0, 65535, 0, 0, 19, 0, 0, 131071, 0, 0, 65555, 0, 0, 196607, 0, 0, 131091, 0, 0, 262143, 1, 0, 196627, 0, 0, 327679, 0, 0, 262163, 0, 0, 393215, 0, 0, 327699, 0, 0, 458751, 0, 0, 393235, 0, 0, 524287, 0, 0, 458771, 0, 0, 589823, 0, 0, 524307, 0, 0, 655359, 0, 0, 589843, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0 )
+tile_data = PoolIntArray( -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -131057, 0, 0, -131056, 0, 0, -131055, 0, 0, -131054, 0, 0, -131053, 0, 0, -1, 0, 0, -65536, 17, 0, -65535, 17, 0, -65534, 17, 0, -65533, 17, 0, -65532, 17, 0, -65531, 17, 0, -65530, 17, 0, -65529, 17, 0, -65528, 17, 0, -65527, 17, 0, -65526, 17, 0, -65525, 17, 0, -65524, 17, 0, -65523, 17, 0, -65522, 17, 0, -65521, 17, 0, -65520, 17, 0, -65519, 17, 0, -65518, 17, 0, -65517, 0, 0, 65535, 0, 0, 0, 17, 0, 1, 17, 0, 2, 17, 0, 3, 17, 0, 4, 17, 0, 5, 17, 0, 6, 17, 0, 7, 17, 0, 8, 20, 0, 9, 17, 0, 10, 17, 0, 11, 17, 0, 12, 17, 0, 13, 17, 0, 14, 17, 0, 15, 17, 0, 16, 17, 0, 17, 17, 0, 18, 17, 0, 19, 0, 0, 131071, 0, 0, 65536, 17, 0, 65537, 17, 0, 65538, 17, 0, 65539, 17, 0, 65540, 20, 0, 65541, 17, 0, 65542, 17, 0, 65543, 18, 0, 65544, 17, 0, 65545, 20, 0, 65546, 20, 0, 65547, 17, 0, 65548, 17, 0, 65549, 17, 0, 65550, 20, 0, 65551, 17, 0, 65552, 17, 0, 65553, 17, 0, 65554, 17, 0, 65555, 0, 0, 196607, 0, 0, 131072, 17, 0, 131073, 17, 0, 131074, 17, 0, 131075, 17, 0, 131076, 17, 0, 131077, 17, 0, 131078, 17, 0, 131079, 18, 0, 131080, 17, 0, 131081, 17, 0, 131082, 17, 0, 131083, 17, 0, 131084, 17, 0, 131085, 17, 0, 131086, 20, 0, 131087, 17, 0, 131088, 17, 0, 131089, 17, 0, 131090, 17, 0, 131091, 0, 0, 262143, 1, 0, 196608, 17, 0, 196609, 17, 0, 196610, 17, 0, 196611, 17, 0, 196612, 17, 0, 196613, 17, 0, 196614, 17, 0, 196615, 17, 0, 196616, 17, 0, 196617, 20, 0, 196618, 17, 0, 196619, 20, 0, 196620, 17, 0, 196621, 20, 0, 196622, 17, 0, 196623, 17, 0, 196624, 17, 0, 196625, 17, 0, 196626, 17, 0, 196627, 0, 0, 327679, 0, 0, 262144, 17, 0, 262145, 17, 0, 262146, 17, 0, 262147, 17, 0, 262148, 17, 0, 262149, 17, 0, 262150, 17, 0, 262151, 17, 0, 262152, 17, 0, 262153, 20, 0, 262154, 17, 0, 262155, 17, 0, 262156, 17, 0, 262157, 6, 0, 262158, 17, 0, 262159, 17, 0, 262160, 17, 0, 262161, 17, 0, 262162, 17, 0, 262163, 0, 0, 393215, 0, 0, 327680, 17, 0, 327681, 17, 0, 327682, 17, 0, 327683, 17, 0, 327684, 6, 0, 327685, 6, 0, 327686, 17, 0, 327687, 17, 0, 327688, 17, 0, 327689, 17, 0, 327690, 17, 0, 327691, 17, 0, 327692, 20, 0, 327693, 17, 0, 327694, 17, 0, 327695, 17, 0, 327696, 17, 0, 327697, 17, 0, 327698, 17, 0, 327699, 0, 0, 458751, 0, 0, 393216, 17, 0, 393217, 17, 0, 393218, 17, 0, 393219, 17, 0, 393220, 6, 0, 393221, 17, 0, 393222, 17, 0, 393223, 17, 0, 393224, 17, 0, 393225, 17, 0, 393226, 17, 0, 393227, 20, 0, 393228, 17, 0, 393229, 17, 0, 393230, 17, 0, 393231, 17, 0, 393232, 17, 0, 393233, 17, 0, 393234, 17, 0, 393235, 0, 0, 524287, 0, 0, 458752, 17, 0, 458753, 17, 0, 458754, 17, 0, 458755, 17, 0, 458756, 17, 0, 458757, 17, 0, 458758, 17, 0, 458759, 17, 0, 458760, 17, 0, 458761, 17, 0, 458762, 17, 0, 458763, 17, 0, 458764, 20, 0, 458765, 20, 0, 458766, 20, 0, 458767, 17, 0, 458768, 17, 0, 458769, 17, 0, 458770, 17, 0, 458771, 0, 0, 589823, 0, 0, 524288, 17, 0, 524289, 17, 0, 524290, 17, 0, 524291, 17, 0, 524292, 17, 0, 524293, 17, 0, 524294, 17, 0, 524295, 17, 0, 524296, 17, 0, 524297, 17, 0, 524298, 17, 0, 524299, 17, 0, 524300, 17, 0, 524301, 17, 0, 524302, 17, 0, 524303, 17, 0, 524304, 17, 0, 524305, 17, 0, 524306, 17, 0, 524307, 0, 0, 655359, 0, 0, 589824, 17, 0, 589825, 17, 0, 589826, 17, 0, 589827, 17, 0, 589828, 17, 0, 589829, 17, 0, 589830, 17, 0, 589831, 17, 0, 589832, 17, 0, 589833, 17, 0, 589834, 17, 0, 589835, 17, 0, 589836, 17, 0, 589837, 17, 0, 589838, 17, 0, 589839, 17, 0, 589840, 17, 0, 589841, 17, 0, 589842, 17, 0, 589843, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0 )
 
-[node name="Enemy" parent="EnemySpawn" index="0" instance=ExtResource( 2 )]
-position = Vector2( 80.8661, 218.814 )
-ItemsList = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 4 ) ]
-EnemyAIType = 3
+[node name="Node2D" type="Node2D" parent="." index="2"]
+
+[node name="TextureRect" type="TextureRect" parent="Node2D" index="0"]
+margin_left = 4.45428
+margin_top = -244.829
+margin_right = 1315.45
+margin_bottom = 224.171
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Node2D" index="1"]
+margin_left = 355.998
+margin_top = -283.744
+margin_right = 1667.0
+margin_bottom = 185.256
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Node2D" index="2"]
+margin_left = 619.105
+margin_top = -243.343
+margin_right = 1930.1
+margin_bottom = 225.657
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="Node2D" index="3"]
+margin_left = -208.911
+margin_top = -238.807
+margin_right = 1102.09
+margin_bottom = 230.193
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="Node2D" index="4"]
+margin_left = -193.656
+margin_top = -41.4244
+margin_right = 1117.34
+margin_bottom = 1269.58
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect6" type="TextureRect" parent="Node2D" index="5"]
+modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = -310.392
+margin_top = -9.99548
+margin_right = 1000.61
+margin_bottom = 1301.0
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect7" type="TextureRect" parent="Node2D" index="6"]
+margin_left = 1137.58
+margin_top = -164.895
+margin_right = 2448.58
+margin_bottom = 1146.1
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect8" type="TextureRect" parent="Node2D" index="7"]
+margin_left = 1146.56
+margin_top = 82.0463
+margin_right = 2457.56
+margin_bottom = 1393.05
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect9" type="TextureRect" parent="Node2D" index="8"]
+margin_left = 531.102
+margin_top = 522.184
+margin_right = 1842.1
+margin_bottom = 991.184
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect10" type="TextureRect" parent="Node2D" index="9"]
+margin_left = -123.965
+margin_top = 517.686
+margin_right = 1187.03
+margin_bottom = 986.686
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect11" type="TextureRect" parent="Node2D" index="10"]
+margin_left = 24.1999
+margin_top = 504.216
+margin_right = 1335.2
+margin_bottom = 973.216
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Beetle" parent="EnemySpawn" index="0" instance=ExtResource( 5 )]
+position = Vector2( 673.092, 92.7582 )
+
+[node name="Plant" parent="EnemySpawn" index="1" instance=ExtResource( 6 )]
+position = Vector2( 228.328, 399.574 )
+
+[node name="Ant" parent="EnemySpawn" index="2" instance=ExtResource( 2 )]
+position = Vector2( 708.768, 480.44 )
 
 [node name="CollisionShape2D" parent="Doors" index="0" groups=[
 "door1",
 ]]
 position = Vector2( -38.0546, 225.949 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." index="9"]
-margin_left = 469.147
-margin_top = 192.373
-margin_right = 730.147
-margin_bottom = 232.373
-text = "Room Left
-
-"
+[node name="TextureRect" type="TextureRect" parent="VisableOnClear" index="0"]
+margin_left = -46.4882
+margin_top = 187.887
+margin_right = 5.51184
+margin_bottom = 250.887
+mouse_filter = 2
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

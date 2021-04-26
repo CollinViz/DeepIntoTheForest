@@ -3,7 +3,7 @@ extends Node2D
 export(PackedScene) var WinScreen = preload("res://UI/Win/Win.tscn")
 export(PackedScene) var PlayerDied = preload("res://UI/PlayerDied/PlayerDied.tscn")
 export(PackedScene) var PlayerLevelUp = preload("res://UI/PlayerLevelUp/PlayerLevelUp.tscn")
-
+export(PackedScene) var Intro = preload("res://UI/IntroScreen/IntorScreen.tscn")
 var level01 = []
 var CurrentRoomIndex = 0
 var CurrentRoom = null
@@ -35,9 +35,9 @@ func _ready():
 	ShopItemsCanHave.push_back({"name":"Fire Rate","description":"Improve gun fire rate","cost":25,"itemName":"ShotsCoolL2"})
 	ShopItemsCanHave.push_back({"name":"Max Fire Rate","description":"Improve gun fire rate","cost":50,"itemName":"ShotsCoolL3"})
 	ShopItemsCanHave.push_back({"name":"Boots of speed","description":"Improve movement speed","cost":25,"itemName":"MoveSpeed"})
-	ShopItemsCanHave.push_back({"name":"Glass hart","description":"Improve max Health","cost":50,"itemName":"MaxHealth"})
+	ShopItemsCanHave.push_back({"name":"Glass heart","description":"Improve max Health","cost":50,"itemName":"MaxHealth"})
 	ShopItemsCanHave.push_back({"name":"Flash in pan","description":"Improve Stamina","cost":50,"itemName":"MaxStamina"})
-	ShopItemsCanHave.push_back({"name":"Floating Shelled","description":"Shelled of protection","cost":50,"itemName":"shelled"})
+	ShopItemsCanHave.push_back({"name":"Floating Shield","description":"Shield of protection","cost":50,"itemName":"shelled"})
 	
 
 func getShopItems()->Array:
@@ -53,6 +53,10 @@ func GoingThroughDoor(DoorName:String):
 		SavedNextDoor = DoorName
 		emit_signal("changeLevel",{"scene":PlayerLevelUp,"clear":false})
 		return
+	if DoorName=="intro":
+		CurrentRoomIndex =0
+		CurrentRoom = level01[0]
+		emit_signal("changeLevel",{"scene":Intro,"clear":false})
 	if DoorName=="done":
 		CurrentRoomIndex =0
 		CurrentRoom = level01[0]

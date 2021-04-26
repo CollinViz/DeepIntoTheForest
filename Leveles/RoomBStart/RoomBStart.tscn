@@ -1,25 +1,216 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Leveles/BaseLevel/baseLevel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Leveles/RoomBStart/top.png" type="Texture" id=2]
+[ext_resource path="res://Leveles/RoomBStart/left.png" type="Texture" id=3]
+[ext_resource path="res://Leveles/reddoor.png" type="Texture" id=4]
+[ext_resource path="res://pickuppng.png" type="Texture" id=5]
+[ext_resource path="res://shoot.png" type="Texture" id=6]
+[ext_resource path="res://Move.png" type="Texture" id=7]
 
 [node name="RoomBStart" instance=ExtResource( 1 )]
 isFirstLevel = true
 
 [node name="back" parent="." index="1"]
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65551, 0, 0, 131072, 0, 0, 131087, 0, 0, 196608, 0, 0, 196623, 0, 0, 262144, 0, 0, 262159, 0, 0, 327680, 0, 0, 327695, 0, 0, 393216, 0, 0, 393231, 0, 0, 458752, 0, 0, 458767, 0, 0, 524288, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 1, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 20, 0, 65538, 20, 0, 65539, 20, 0, 65540, 20, 0, 65541, 20, 0, 65542, 20, 0, 65543, 18, 0, 65544, 18, 0, 65545, 19, 0, 65546, 19, 0, 65547, 19, 0, 65548, 19, 0, 65549, 19, 0, 65550, 19, 0, 65551, 0, 0, 131072, 0, 0, 131073, 20, 0, 131074, 20, 0, 131075, 18, 0, 131076, 20, 0, 131077, 20, 0, 131078, 20, 0, 131079, 20, 0, 131080, 18, 0, 131081, 18, 0, 131082, 19, 0, 131083, 19, 0, 131084, 19, 0, 131085, 19, 0, 131086, 19, 0, 131087, 0, 0, 196608, 0, 0, 196609, 18, 0, 196610, 20, 0, 196611, 18, 0, 196612, 18, 0, 196613, 20, 0, 196614, 18, 0, 196615, 18, 0, 196616, 20, 0, 196617, 18, 0, 196618, 18, 0, 196619, 18, 0, 196620, 19, 0, 196621, 19, 0, 196622, 19, 0, 196623, 0, 0, 262144, 0, 0, 262145, 18, 0, 262146, 18, 0, 262147, 18, 0, 262148, 18, 0, 262149, 20, 0, 262150, 18, 0, 262151, 18, 0, 262152, 20, 0, 262153, 20, 0, 262154, 20, 0, 262155, 18, 0, 262156, 18, 0, 262157, 19, 0, 262158, 19, 0, 262159, 0, 0, 327680, 0, 0, 327681, 18, 0, 327682, 18, 0, 327683, 18, 0, 327684, 18, 0, 327685, 18, 0, 327686, 18, 0, 327687, 18, 0, 327688, 18, 0, 327689, 18, 0, 327690, 18, 0, 327691, 20, 0, 327692, 18, 0, 327693, 19, 0, 327694, 19, 0, 327695, 0, 0, 393216, 0, 0, 393217, 18, 0, 393218, 18, 0, 393219, 18, 0, 393220, 18, 0, 393221, 18, 0, 393222, 18, 0, 393223, 18, 0, 393224, 18, 0, 393225, 18, 0, 393226, 18, 0, 393227, 20, 0, 393228, 18, 0, 393229, 18, 0, 393230, 18, 0, 393231, 0, 0, 458752, 0, 0, 458753, 18, 0, 458754, 18, 0, 458755, 18, 0, 458756, 18, 0, 458757, 18, 0, 458758, 18, 0, 458759, 18, 0, 458760, 18, 0, 458761, 18, 0, 458762, 18, 0, 458763, 18, 0, 458764, 20, 0, 458765, 20, 0, 458766, 18, 0, 458767, 0, 0, 524288, 0, 0, 524289, 18, 0, 524290, 18, 0, 524291, 18, 0, 524292, 18, 0, 524293, 18, 0, 524294, 18, 0, 524295, 18, 0, 524296, 18, 0, 524297, 18, 0, 524298, 18, 0, 524299, 18, 0, 524300, 18, 0, 524301, 20, 0, 524302, 18, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 1, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
+
+[node name="Node2D" type="Node2D" parent="." index="2"]
+
+[node name="TextureRect" type="TextureRect" parent="Node2D" index="0"]
+margin_left = -31.4644
+margin_top = -116.868
+margin_right = 1279.54
+margin_bottom = 352.132
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Node2D" index="1"]
+margin_left = 488.448
+margin_top = -119.865
+margin_right = 1799.45
+margin_bottom = 349.135
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Node2D" index="2"]
+modulate = Color( 1, 1, 1, 0.572549 )
+margin_left = 444.001
+margin_top = -277.017
+margin_right = 1755.0
+margin_bottom = 191.983
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="Node2D" index="3"]
+modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = -33.8068
+margin_top = -250.031
+margin_right = 1277.19
+margin_bottom = 218.969
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="Node2D" index="4"]
+margin_left = -126.308
+margin_top = -43.6693
+margin_right = 1184.69
+margin_bottom = 1267.33
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect6" type="TextureRect" parent="Node2D" index="5"]
+modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = -243.044
+margin_top = -34.6896
+margin_right = 1067.96
+margin_bottom = 1276.31
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect12" type="TextureRect" parent="Node2D" index="6"]
+modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = -218.35
+margin_top = -261.427
+margin_right = 1092.65
+margin_bottom = 1049.57
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect7" type="TextureRect" parent="Node2D" index="7"]
+margin_left = 917.582
+margin_top = -30.1998
+margin_right = 2228.58
+margin_bottom = 1280.8
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect8" type="TextureRect" parent="Node2D" index="8"]
+modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = 1072.48
+margin_top = -45.9143
+margin_right = 2383.48
+margin_bottom = 1265.09
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect9" type="TextureRect" parent="Node2D" index="9"]
+margin_left = 531.102
+margin_top = 522.184
+margin_right = 1842.1
+margin_bottom = 991.184
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect10" type="TextureRect" parent="Node2D" index="10"]
+margin_left = -70.0868
+margin_top = 569.319
+margin_right = 1240.91
+margin_bottom = 1038.32
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect11" type="TextureRect" parent="Node2D" index="11"]
+margin_left = 26.4448
+margin_top = 537.89
+margin_right = 1337.44
+margin_bottom = 1006.89
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." index="7"]
+position = Vector2( 479.638, 221.434 )
+PlayerView = Rect2( -150, -150, 1024, 650 )
 
 [node name="CollisionShape2D" parent="Doors" index="0" groups=[
 "door1",
 ]]
 position = Vector2( 489.393, 603.884 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." index="9"]
-margin_left = 469.147
-margin_top = 192.373
-margin_right = 730.147
-margin_bottom = 232.373
-text = "Room Start
-"
+[node name="TextureRect" type="TextureRect" parent="VisableOnClear" index="0"]
+margin_left = 457.965
+margin_top = 576.946
+margin_right = 509.965
+margin_bottom = 639.946
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="VisableOnClear" index="1"]
+margin_left = 200.0
+margin_top = 290.0
+margin_right = 326.0
+margin_bottom = 430.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="VisableOnClear" index="2"]
+margin_left = 394.878
+margin_top = 321.148
+margin_right = 520.878
+margin_bottom = 461.148
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="VisableOnClear" index="3"]
+margin_left = 636.743
+margin_top = 264.515
+margin_right = 762.743
+margin_bottom = 413.515
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

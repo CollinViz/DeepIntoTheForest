@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Leveles/BaseLevel/baseLevel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Items/ItemSence/XP.tscn" type="PackedScene" id=2]
-[ext_resource path="res://BadGuys/BaseBadGuy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Items/ItemSence/Gold.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Leveles/RoomTLB/Top.png" type="Texture" id=2]
+[ext_resource path="res://BadGuys/Caterpillar/Caterpillar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Leveles/RoomTLB/sideL.png" type="Texture" id=4]
+[ext_resource path="res://BadGuys/Plant/Plant.tscn" type="PackedScene" id=5]
+[ext_resource path="res://BadGuys/Bee/Bee.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Leveles/reddoor.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 53.3545, 55.5632 )
@@ -11,12 +14,254 @@ extents = Vector2( 53.3545, 55.5632 )
 [node name="RoomBR" instance=ExtResource( 1 )]
 
 [node name="back" parent="." index="1"]
-tile_data = PoolIntArray( -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -131057, 0, 0, -131056, 0, 0, -131055, 0, 0, -131054, 0, 0, -131053, 0, 0, -1, 0, 0, -65517, 0, 0, 65535, 0, 0, 19, 0, 0, 131071, 0, 0, 65555, 0, 0, 196607, 0, 0, 131091, 0, 0, 262143, 0, 0, 196627, 1, 0, 327679, 0, 0, 262163, 0, 0, 393215, 0, 0, 327699, 0, 0, 458751, 0, 0, 393235, 0, 0, 524287, 0, 0, 458771, 0, 0, 589823, 0, 0, 524307, 0, 0, 655359, 0, 0, 589843, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 1, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0 )
+tile_data = PoolIntArray( -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -131057, 0, 0, -131056, 0, 0, -131055, 0, 0, -131054, 0, 0, -131053, 0, 0, -1, 0, 0, -65536, 12, 0, -65535, 12, 0, -65534, 12, 0, -65533, 12, 0, -65532, 12, 0, -65531, 12, 0, -65530, 12, 0, -65529, 12, 0, -65528, 12, 0, -65527, 12, 0, -65526, 12, 0, -65525, 12, 0, -65524, 12, 0, -65523, 12, 0, -65522, 12, 0, -65521, 12, 0, -65520, 12, 0, -65519, 12, 0, -65518, 12, 0, -65517, 0, 0, 65535, 0, 0, 0, 12, 0, 1, 12, 0, 2, 12, 0, 3, 12, 0, 4, 8, 0, 5, 12, 0, 6, 12, 0, 7, 12, 0, 8, 12, 0, 9, 12, 0, 10, 12, 0, 11, 12, 0, 12, 12, 0, 13, 8, 0, 14, 12, 0, 15, 12, 0, 16, 8, 0, 17, 12, 0, 18, 12, 0, 19, 0, 0, 131071, 0, 0, 65536, 12, 0, 65537, 12, 0, 65538, 12, 0, 65539, 12, 0, 65540, 12, 0, 65541, 12, 0, 65542, 12, 0, 65543, 11, 0, 65544, 12, 0, 65545, 11, 0, 65546, 11, 0, 65547, 12, 0, 65548, 12, 0, 65549, 12, 0, 65550, 11, 0, 65551, 11, 0, 65552, 12, 0, 65553, 12, 0, 65554, 12, 0, 65555, 0, 0, 196607, 0, 0, 131072, 12, 0, 131073, 12, 0, 131074, 12, 0, 131075, 12, 0, 131076, 12, 0, 131077, 11, 0, 131078, 12, 0, 131079, 12, 0, 131080, 12, 0, 131081, 12, 0, 131082, 12, 0, 131083, 12, 0, 131084, 12, 0, 131085, 8, 0, 131086, 12, 0, 131087, 12, 0, 131088, 12, 0, 131089, 12, 0, 131090, 12, 0, 131091, 0, 0, 262143, 0, 0, 196608, 12, 0, 196609, 12, 0, 196610, 12, 0, 196611, 12, 0, 196612, 11, 0, 196613, 12, 0, 196614, 12, 0, 196615, 12, 0, 196616, 12, 0, 196617, 12, 0, 196618, 12, 0, 196619, 8, 0, 196620, 12, 0, 196621, 12, 0, 196622, 12, 0, 196623, 12, 0, 196624, 12, 0, 196625, 8, 0, 196626, 12, 0, 196627, 1, 0, 327679, 0, 0, 262144, 12, 0, 262145, 12, 0, 262146, 12, 0, 262147, 11, 0, 262148, 11, 0, 262149, 12, 0, 262150, 8, 0, 262151, 12, 0, 262152, 12, 0, 262153, 12, 0, 262154, 12, 0, 262155, 12, 0, 262156, 12, 0, 262157, 12, 0, 262158, 12, 0, 262159, 12, 0, 262160, 12, 0, 262161, 12, 0, 262162, 12, 0, 262163, 0, 0, 393215, 0, 0, 327680, 12, 0, 327681, 12, 0, 327682, 11, 0, 327683, 11, 0, 327684, 12, 0, 327685, 12, 0, 327686, 12, 0, 327687, 12, 0, 327688, 12, 0, 327689, 12, 0, 327690, 12, 0, 327691, 12, 0, 327692, 12, 0, 327693, 12, 0, 327694, 12, 0, 327695, 12, 0, 327696, 12, 0, 327697, 12, 0, 327698, 12, 0, 327699, 0, 0, 458751, 0, 0, 393216, 12, 0, 393217, 12, 0, 393218, 11, 0, 393219, 11, 0, 393220, 12, 0, 393221, 12, 0, 393222, 12, 0, 393223, 12, 0, 393224, 12, 0, 393225, 8, 0, 393226, 12, 0, 393227, 12, 0, 393228, 12, 0, 393229, 12, 0, 393230, 12, 0, 393231, 12, 0, 393232, 12, 0, 393233, 8, 0, 393234, 12, 0, 393235, 0, 0, 524287, 0, 0, 458752, 12, 0, 458753, 12, 0, 458754, 8, 0, 458755, 12, 0, 458756, 12, 0, 458757, 12, 0, 458758, 8, 0, 458759, 8, 0, 458760, 12, 0, 458761, 8, 0, 458762, 12, 0, 458763, 12, 0, 458764, 12, 0, 458765, 12, 0, 458766, 12, 0, 458767, 12, 0, 458768, 12, 0, 458769, 12, 0, 458770, 12, 0, 458771, 0, 0, 589823, 0, 0, 524288, 12, 0, 524289, 12, 0, 524290, 12, 0, 524291, 8, 0, 524292, 12, 0, 524293, 12, 0, 524294, 12, 0, 524295, 12, 0, 524296, 12, 0, 524297, 8, 0, 524298, 12, 0, 524299, 12, 0, 524300, 12, 0, 524301, 12, 0, 524302, 12, 0, 524303, 12, 0, 524304, 12, 0, 524305, 12, 0, 524306, 8, 0, 524307, 0, 0, 655359, 0, 0, 589824, 12, 0, 589825, 12, 0, 589826, 12, 0, 589827, 12, 0, 589828, 12, 0, 589829, 12, 0, 589830, 8, 0, 589831, 12, 0, 589832, 12, 0, 589833, 12, 0, 589834, 12, 0, 589835, 12, 0, 589836, 12, 0, 589837, 12, 0, 589838, 12, 0, 589839, 12, 0, 589840, 8, 0, 589841, 12, 0, 589842, 12, 0, 589843, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 1, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0 )
 
-[node name="Enemy" parent="EnemySpawn" index="0" instance=ExtResource( 3 )]
-position = Vector2( 913.03, 403.122 )
-Attack = 1
-ItemsList = [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 2 ) ]
+[node name="Node2D" type="Node2D" parent="." index="2"]
+
+[node name="TextureRect" type="TextureRect" parent="Node2D" index="0"]
+margin_left = -94.1803
+margin_top = -186.679
+margin_right = 963.82
+margin_bottom = 117.321
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Node2D" index="1"]
+margin_left = 368.312
+margin_top = -205.179
+margin_right = 1426.31
+margin_bottom = 98.8214
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Node2D" index="2"]
+margin_left = 694.58
+margin_top = -193.406
+margin_right = 1752.58
+margin_bottom = 110.594
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="Node2D" index="3"]
+margin_left = 1049.44
+margin_top = -213.588
+margin_right = 2107.44
+margin_bottom = 90.4124
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="Node2D" index="4"]
+margin_left = -114.362
+margin_top = -262.359
+margin_right = 943.638
+margin_bottom = 41.6405
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect6" type="TextureRect" parent="Node2D" index="5"]
+margin_left = 348.131
+margin_top = -280.859
+margin_right = 1406.13
+margin_bottom = 23.1408
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect7" type="TextureRect" parent="Node2D" index="6"]
+margin_left = 674.398
+margin_top = -269.087
+margin_right = 1732.4
+margin_bottom = 34.9133
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect8" type="TextureRect" parent="Node2D" index="7"]
+margin_left = 1029.26
+margin_top = -289.268
+margin_right = 2087.26
+margin_bottom = 14.7318
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect9" type="TextureRect" parent="Node2D" index="8"]
+margin_left = -168.179
+margin_top = 607.127
+margin_right = 889.821
+margin_bottom = 911.127
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect10" type="TextureRect" parent="Node2D" index="9"]
+margin_left = 294.314
+margin_top = 588.627
+margin_right = 1352.31
+margin_bottom = 892.627
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect11" type="TextureRect" parent="Node2D" index="10"]
+margin_left = 620.581
+margin_top = 600.4
+margin_right = 1678.58
+margin_bottom = 904.4
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect12" type="TextureRect" parent="Node2D" index="11"]
+margin_left = 975.439
+margin_top = 580.218
+margin_right = 2033.44
+margin_bottom = 884.218
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect13" type="TextureRect" parent="Node2D" index="12"]
+margin_left = -232.087
+margin_top = 684.489
+margin_right = 825.913
+margin_bottom = 988.489
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect14" type="TextureRect" parent="Node2D" index="13"]
+margin_left = 230.405
+margin_top = 665.99
+margin_right = 1288.41
+margin_bottom = 969.99
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect15" type="TextureRect" parent="Node2D" index="14"]
+margin_left = 556.673
+margin_top = 677.762
+margin_right = 1614.67
+margin_bottom = 981.762
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect16" type="TextureRect" parent="Node2D" index="15"]
+margin_left = 911.531
+margin_top = 657.58
+margin_right = 1969.53
+margin_bottom = 961.58
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect17" type="TextureRect" parent="Node2D" index="16"]
+margin_left = -249.187
+margin_top = -98.7767
+margin_right = 39.8134
+margin_bottom = 663.223
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect18" type="TextureRect" parent="Node2D" index="17"]
+margin_left = -422.046
+margin_top = -110.001
+margin_right = -133.046
+margin_bottom = 651.999
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect19" type="TextureRect" parent="Node2D" index="18"]
+margin_left = 1333.48
+margin_top = -123.471
+margin_right = 1622.48
+margin_bottom = 638.529
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect20" type="TextureRect" parent="Node2D" index="19"]
+margin_left = 1160.63
+margin_top = -134.695
+margin_right = 1449.63
+margin_bottom = 627.305
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bee" parent="EnemySpawn" index="0" instance=ExtResource( 6 )]
+position = Vector2( 787.969, 101.022 )
+
+[node name="Caterpillar" parent="EnemySpawn" index="1" instance=ExtResource( 3 )]
+position = Vector2( 161.635, 296.331 )
+
+[node name="Plant" parent="EnemySpawn" index="2" instance=ExtResource( 5 )]
+position = Vector2( 628.579, 442.25 )
 
 [node name="CollisionShape2D" parent="Doors" index="0" groups=[
 "door2",
@@ -29,12 +274,24 @@ position = Vector2( 1238.73, 226.923 )
 position = Vector2( 541.945, 680.768 )
 shape = SubResource( 1 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." index="9"]
-margin_left = 469.147
-margin_top = 192.373
-margin_right = 730.147
-margin_bottom = 232.373
-text = "Room BR"
+[node name="TextureRect" type="TextureRect" parent="VisableOnClear" index="0"]
+margin_left = 520.823
+margin_top = 639.804
+margin_right = 572.823
+margin_bottom = 702.804
+mouse_filter = 2
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="VisableOnClear" index="1"]
+margin_left = 1214.51
+margin_top = 193.064
+margin_right = 1266.51
+margin_bottom = 256.064
+mouse_filter = 2
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

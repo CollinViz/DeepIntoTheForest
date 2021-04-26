@@ -1,6 +1,7 @@
 extends Control
 
-
+export (PackedScene) var StartScreen
+export (PackedScene) var intoScreen
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -9,7 +10,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$MainMenu.visible=false
-	var lev = GameDb.CurrentRoom.scene.instance()
+	var lev = StartScreen.instance()
 	$CurrentLevel.add_child(lev)
 	var _x = GameDb.connect("changeLevel",self,"LevelChange")
 	var _y = PlayerDb.connect("PlayerDied",self,"playerDeath")

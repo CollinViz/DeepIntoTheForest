@@ -4,7 +4,7 @@ extends CanvasLayer
 onready var gold:RichTextLabel = $Panel/VBoxContainer/Gold
 onready var xp:RichTextLabel = $Panel/VBoxContainer/XP
 onready var level:RichTextLabel = $Panel/VBoxContainer/Level
-onready var bar:TextureProgress = $Panel/VBoxContainer/TextureProgress
+onready var bar:TextureProgress = $Panel/VBoxContainer/CenterContainer2/TextureProgress
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

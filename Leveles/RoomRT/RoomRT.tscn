@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Leveles/BaseLevel/baseLevel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://BadGuys/BaseBadGuy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Leveles/RoomRT/sideBottom.png" type="Texture" id=2]
+[ext_resource path="res://Leveles/RoomRT/sideLeft.png" type="Texture" id=3]
+[ext_resource path="res://Leveles/reddoor.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48.1202, 48.1986 )
@@ -9,12 +11,99 @@ extents = Vector2( 48.1202, 48.1986 )
 [node name="RoomRT" instance=ExtResource( 1 )]
 
 [node name="back" parent="." index="1"]
-tile_data = PoolIntArray( -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 1, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -131057, 0, 0, -131056, 0, 0, -131055, 0, 0, -131054, 0, 0, -131053, 0, 0, -1, 0, 0, -65517, 0, 0, 65535, 0, 0, 19, 0, 0, 131071, 0, 0, 65555, 0, 0, 196607, 0, 0, 131091, 2, 0, 262143, 0, 0, 196627, 0, 0, 327679, 0, 0, 262163, 0, 0, 393215, 0, 0, 327699, 0, 0, 458751, 0, 0, 393235, 0, 0, 524287, 0, 0, 458771, 0, 0, 589823, 0, 0, 524307, 0, 0, 655359, 0, 0, 589843, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0 )
+tile_data = PoolIntArray( -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 1, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -131057, 0, 0, -131056, 0, 0, -131055, 0, 0, -131054, 0, 0, -131053, 0, 0, -1, 0, 0, -65536, 14, 0, -65535, 14, 0, -65534, 14, 0, -65533, 14, 0, -65532, 14, 0, -65531, 14, 0, -65530, 14, 0, -65529, 14, 0, -65528, 14, 0, -65527, 14, 0, -65526, 14, 0, -65525, 14, 0, -65524, 14, 0, -65523, 14, 0, -65522, 14, 0, -65521, 14, 0, -65520, 14, 0, -65519, 14, 0, -65518, 14, 0, -65517, 0, 0, 65535, 0, 0, 0, 14, 0, 1, 14, 0, 2, 14, 0, 3, 14, 0, 4, 14, 0, 5, 15, 0, 6, 14, 0, 7, 14, 0, 8, 14, 0, 9, 14, 0, 10, 14, 0, 11, 14, 0, 12, 14, 0, 13, 14, 0, 14, 14, 0, 15, 14, 0, 16, 14, 0, 17, 14, 0, 18, 14, 0, 19, 0, 0, 131071, 0, 0, 65536, 14, 0, 65537, 14, 0, 65538, 14, 0, 65539, 14, 0, 65540, 14, 0, 65541, 14, 0, 65542, 14, 0, 65543, 14, 0, 65544, 14, 0, 65545, 15, 0, 65546, 15, 0, 65547, 14, 0, 65548, 15, 0, 65549, 14, 0, 65550, 15, 0, 65551, 15, 0, 65552, 14, 0, 65553, 14, 0, 65554, 14, 0, 65555, 0, 0, 196607, 0, 0, 131072, 14, 0, 131073, 14, 0, 131074, 15, 0, 131075, 14, 0, 131076, 14, 0, 131077, 14, 0, 131078, 14, 0, 131079, 14, 0, 131080, 14, 0, 131081, 14, 0, 131082, 14, 0, 131083, 14, 0, 131084, 14, 0, 131085, 14, 0, 131086, 15, 0, 131087, 14, 0, 131088, 14, 0, 131089, 14, 0, 131090, 14, 0, 131091, 2, 0, 262143, 0, 0, 196608, 14, 0, 196609, 14, 0, 196610, 14, 0, 196611, 14, 0, 196612, 15, 0, 196613, 14, 0, 196614, 14, 0, 196615, 14, 0, 196616, 14, 0, 196617, 14, 0, 196618, 14, 0, 196619, 14, 0, 196620, 15, 0, 196621, 14, 0, 196622, 14, 0, 196623, 14, 0, 196624, 14, 0, 196625, 14, 0, 196626, 14, 0, 196627, 0, 0, 327679, 0, 0, 262144, 14, 0, 262145, 14, 0, 262146, 15, 0, 262147, 14, 0, 262148, 14, 0, 262149, 14, 0, 262150, 14, 0, 262151, 14, 0, 262152, 14, 0, 262153, 14, 0, 262154, 14, 0, 262155, 14, 0, 262156, 15, 0, 262157, 14, 0, 262158, 15, 0, 262159, 14, 0, 262160, 14, 0, 262161, 14, 0, 262162, 14, 0, 262163, 0, 0, 393215, 0, 0, 327680, 14, 0, 327681, 14, 0, 327682, 15, 0, 327683, 14, 0, 327684, 15, 0, 327685, 14, 0, 327686, 14, 0, 327687, 14, 0, 327688, 14, 0, 327689, 14, 0, 327690, 14, 0, 327691, 14, 0, 327692, 14, 0, 327693, 14, 0, 327694, 14, 0, 327695, 14, 0, 327696, 15, 0, 327697, 14, 0, 327698, 14, 0, 327699, 0, 0, 458751, 0, 0, 393216, 14, 0, 393217, 14, 0, 393218, 14, 0, 393219, 14, 0, 393220, 15, 0, 393221, 14, 0, 393222, 14, 0, 393223, 14, 0, 393224, 14, 0, 393225, 14, 0, 393226, 14, 0, 393227, 14, 0, 393228, 14, 0, 393229, 15, 0, 393230, 14, 0, 393231, 14, 0, 393232, 15, 0, 393233, 15, 0, 393234, 14, 0, 393235, 0, 0, 524287, 0, 0, 458752, 14, 0, 458753, 14, 0, 458754, 14, 0, 458755, 14, 0, 458756, 14, 0, 458757, 14, 0, 458758, 15, 0, 458759, 15, 0, 458760, 14, 0, 458761, 14, 0, 458762, 15, 0, 458763, 15, 0, 458764, 14, 0, 458765, 14, 0, 458766, 15, 0, 458767, 15, 0, 458768, 15, 0, 458769, 14, 0, 458770, 14, 0, 458771, 0, 0, 589823, 0, 0, 524288, 14, 0, 524289, 14, 0, 524290, 14, 0, 524291, 14, 0, 524292, 14, 0, 524293, 14, 0, 524294, 14, 0, 524295, 14, 0, 524296, 14, 0, 524297, 14, 0, 524298, 14, 0, 524299, 14, 0, 524300, 14, 0, 524301, 14, 0, 524302, 14, 0, 524303, 14, 0, 524304, 14, 0, 524305, 14, 0, 524306, 14, 0, 524307, 0, 0, 655359, 0, 0, 589824, 14, 0, 589825, 14, 0, 589826, 14, 0, 589827, 14, 0, 589828, 14, 0, 589829, 14, 0, 589830, 14, 0, 589831, 14, 0, 589832, 14, 0, 589833, 14, 0, 589834, 14, 0, 589835, 14, 0, 589836, 14, 0, 589837, 14, 0, 589838, 14, 0, 589839, 14, 0, 589840, 14, 0, 589841, 14, 0, 589842, 14, 0, 589843, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0 )
 
-[node name="Enemy" parent="EnemySpawn" index="0" instance=ExtResource( 2 )]
-position = Vector2( 921.733, 406.834 )
+[node name="Node2D" type="Node2D" parent="." index="2"]
 
-[node name="Doors" parent="." index="8"]
+[node name="TextureRect" type="TextureRect" parent="Node2D" index="0"]
+margin_left = -173.529
+margin_top = -400.452
+margin_right = 29.4709
+margin_bottom = 366.548
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Node2D" index="1"]
+margin_left = -181.538
+margin_top = 114.796
+margin_right = 21.4619
+margin_bottom = 881.796
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect7" type="TextureRect" parent="Node2D" index="2"]
+margin_left = 1180.0
+margin_top = -349.728
+margin_right = 1383.0
+margin_bottom = 417.272
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect8" type="TextureRect" parent="Node2D" index="3"]
+margin_left = 1171.99
+margin_top = 165.52
+margin_right = 1374.99
+margin_bottom = 932.52
+mouse_filter = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Node2D" index="4"]
+margin_left = -66.7419
+margin_top = 589.999
+margin_right = 1059.26
+margin_bottom = 792.999
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="Node2D" index="5"]
+margin_left = 736.831
+margin_top = 603.347
+margin_right = 1862.83
+margin_bottom = 806.347
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="Node2D" index="6"]
+margin_left = -333.71
+margin_top = -237.601
+margin_right = 792.29
+margin_bottom = -34.6013
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect6" type="TextureRect" parent="Node2D" index="7"]
+margin_left = 469.863
+margin_top = -224.253
+margin_right = 1595.86
+margin_bottom = -21.2529
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Doors" parent="." index="9"]
 collision_mask = 3
 
 [node name="CollisionShape2D" parent="Doors" index="0" groups=[
@@ -28,14 +117,24 @@ position = Vector2( 533.367, -92.0693 )
 position = Vector2( 1249.98, 152.964 )
 shape = SubResource( 1 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." index="9"]
-margin_left = 469.147
-margin_top = 192.373
-margin_right = 730.147
-margin_bottom = 232.373
-text = "Room Top Right
+[node name="TextureRect" type="TextureRect" parent="VisableOnClear" index="0"]
+margin_left = 519.192
+margin_top = -125.195
+margin_right = 571.192
+margin_bottom = -62.1946
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-"
+[node name="TextureRect2" type="TextureRect" parent="VisableOnClear" index="1"]
+margin_left = 1213.31
+margin_top = 125.755
+margin_right = 1265.31
+margin_bottom = 188.755
+mouse_filter = 2
+texture = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
