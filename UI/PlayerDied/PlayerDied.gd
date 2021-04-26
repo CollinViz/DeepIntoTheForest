@@ -1,6 +1,6 @@
-extends Node2D
-
+extends Control
 export var clear:=false
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -14,3 +14,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Button_pressed():
+	GameDb.restart()

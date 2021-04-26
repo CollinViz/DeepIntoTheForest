@@ -58,7 +58,8 @@ func addStamina(NewStamina:int)->void:
 	
 	emit_signal("StaminaChange",PlayerStamina,PlayerMaxStamina)
 
-
+func getGold()->int:
+	return PlayerGold
 func addGold(NewGold:int)->void:
 	PlayerGold=PlayerGold+NewGold
 	print("Your Gold is %d" % PlayerGold)
@@ -92,7 +93,7 @@ func resetData(PlayerNode:Node):
 	PlayerShotsCoolDownSec = 0.5
 	PlayerBaseDamage  = 1
 	PlayerBaseBlock = 1
-	PlayerGold=0
+	PlayerGold=1000
 	PlayerXP =0
 	addXP(0)
 	addGold(0)
@@ -114,10 +115,12 @@ func takeItem(ItemType:String)->void:
 			addHealth(20)
 		"Helth50":
 			addHealth(50)
+		"FullHealth":
+			addHealth(PlayerMaxHealth)
 		"MaxStamina":
 			PlayerMaxStamina=PlayerMaxStamina+ int(PlayerMaxStamina*0.50)
 			addStamina(PlayerMaxStamina)
-		"MaxHelth":
+		"MaxHealth":
 			PlayerMaxHealth=PlayerMaxHealth+ int(PlayerMaxHealth*0.50)
 			addHealth(PlayerMaxHealth)
 		"MoveSpeed":

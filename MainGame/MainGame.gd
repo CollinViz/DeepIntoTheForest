@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 # Declare member variables here. Examples:
@@ -12,6 +12,7 @@ func _ready():
 	var lev = GameDb.CurrentRoom.scene.instance()
 	$CurrentLevel.add_child(lev)
 	var _x = GameDb.connect("changeLevel",self,"LevelChange")
+	var _y = PlayerDb.connect("PlayerDied",self,"playerDeath")
 
 func LevelChange(NewCurrentLevel):
 	if $CurrentLevel.get_child_count()>0:
@@ -19,4 +20,10 @@ func LevelChange(NewCurrentLevel):
 			$CurrentLevel.remove_child(c)
 			c.queue_free()
 	var lev = NewCurrentLevel.scene.instance()
+	
+	lev.clear=NewCurrentLevel.clear
 	$CurrentLevel.add_child(lev) 
+
+
+func playerDeath():
+	GameDb.GoingThroughDoor("dead")

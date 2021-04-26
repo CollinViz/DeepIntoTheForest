@@ -2,11 +2,13 @@ extends Node2D
 export(PackedScene) var Blood
 export(PackedScene) var ItemSpawner
 export(bool) var isFirstLevel = false
+export(bool) var clear = false
 
 onready var fxSpawner = $FXEnemy
 onready var BulletEnemy = $BulletEnemy
 onready var BulletPlayer = $BulletPlayer
 onready var Doors = $Doors
+onready var RoomClearItems = $VisableOnClear
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,8 +16,18 @@ func _ready():
 		PlayerDb.resetData($Player)
 	else:
 		PlayerDb._playerNode = $Player
+	
+	#Setup all room env
 	Doors.monitorable=false
 	Doors.monitoring = false
+	RoomClearItems.visible = false
+	
+	#clear all enemies if room is clear
+	if clear:
+		for c  in $EnemySpawn.get_children():						
+			$EnemySpawn.remove_child(c)
+			c.queue_free()
+		_on_AllDead_timeout()
 
 
 func spawn_loot(ItemsList,pos):
@@ -39,6 +51,7 @@ func _on_AllDead_timeout():
 		Doors.monitoring = true
 		print("Well done all dead")
 		$AllDead.stop()
+		RoomClearItems.visible = true
 
 
  

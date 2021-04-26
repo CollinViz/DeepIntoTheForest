@@ -1,6 +1,6 @@
 extends Node2D
 
-export var clear:=false
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -14,3 +14,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Area2D_body_entered(body):
+	 
+	if $CPUParticles2D.emitting and body.is_in_group("player"):
+		$CPUParticles2D.emitting = false
+		$CPUParticles2D2.emitting = false
+		PlayerDb.takeItem("FullHealth")

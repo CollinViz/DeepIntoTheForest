@@ -1,5 +1,6 @@
 extends Control
 
+export var clear:=false
 
 onready var butHealth = $VBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer/Health
 onready var butSpeed = $VBoxContainer/CenterContainer2/VBoxContainer/HBoxContainer/Speed
@@ -28,7 +29,7 @@ func _ready():
 
 
 func _on_Health_pressed():
-	PlayerDb.takeItem("MaxHelth")
+	PlayerDb.takeItem("MaxHealth")
 	PlayerDb.LevelUp()
 	GameDb.BackToNextDoor()
 

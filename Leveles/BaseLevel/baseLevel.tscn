@@ -135,6 +135,8 @@ shape = SubResource( 8 )
 
 [node name="PlayerUI" parent="." instance=ExtResource( 9 )]
 
+[node name="VisableOnClear" type="Node2D" parent="."]
+
 [connection signal="timeout" from="AllDead" to="." method="_on_AllDead_timeout"]
 [connection signal="body_entered" from="Doors" to="." method="_on_Doors_body_entered"]
 [connection signal="body_shape_entered" from="Doors" to="." method="_on_Doors_body_shape_entered"]
