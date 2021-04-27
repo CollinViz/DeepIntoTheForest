@@ -54,6 +54,7 @@ func _on_AllDead_timeout():
 		print("Well done all dead")
 		$AllDead.stop()
 		RoomClearItems.visible = true
+		#$MusicManager.level_win()
 
 
  

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bossBattle.wav-bd3def4fa02bcdcd982ae6cd0e4c18c0.sample"
+
+[deps]
+
+source_file="res://GameDb/bossBattle.wav"
+dest_files=[ "res://.import/bossBattle.wav-bd3def4fa02bcdcd982ae6cd0e4c18c0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

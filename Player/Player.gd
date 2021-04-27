@@ -104,6 +104,7 @@ func _on_Timer_timeout():
 #PlayerDb.setHealth(-1)
 
 func takeDamage(NumHit:int)->void:
+	MusicManager.player_hit()
 	print("Geeting hit %d %d %d" % [PlayerDb.PlayerHealth,PlayerDb.PlayerMaxHealth,NumHit])
 	match PlayerFSM.state:
 		PlayerFSM.states.dodge:

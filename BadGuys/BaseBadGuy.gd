@@ -138,6 +138,7 @@ func takeDamage(NumHit:int)->void:
 	checkTargetPlayer()
 	MaxHP=MaxHP-NumHit
 	if(MaxHP<=0):
+		MusicManager.enemy_dead()
 		print("You Killed me")
 		get_parent().get_parent().spawn_loot(ItemsList,global_position)
 		queue_free()

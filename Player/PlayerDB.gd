@@ -121,6 +121,7 @@ func resetData(PlayerNode:Node):
 	emit_signal("PlayerLevelChange",PlayerLevel,PlayerXPNextLevel)
 	
 func takeItem(ItemType:String)->void:
+	MusicManager.player_collect()
 	match ItemType:
 		"Gold":
 			addGold(1)

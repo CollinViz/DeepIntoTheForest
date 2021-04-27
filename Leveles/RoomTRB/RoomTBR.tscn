@@ -150,10 +150,10 @@ __meta__ = {
 }
 
 [node name="Ant" parent="EnemySpawn" index="0" instance=ExtResource( 2 )]
-position = Vector2( 943.172, 501.949 )
+position = Vector2( 812.966, 371.743 )
 
 [node name="Ant2" parent="EnemySpawn" index="1" instance=ExtResource( 2 )]
-position = Vector2( 267.337, 105.605 )
+position = Vector2( 408.767, 134.789 )
 
 [node name="Player" parent="." index="7"]
 position = Vector2( 618.393, 245.058 )

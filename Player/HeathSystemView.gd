@@ -25,6 +25,7 @@ func _ready():
 	var _x = PlayerDb.connect("HealthChange",self,"setHealth")
 	var _y = PlayerDb.connect("StaminaChange",self,"setStamina")
 	var _s = PlayerDb.connect("PlayerDataChange",self,"PlayerDataChange")
+	PlayerDataChange()
 
 
 

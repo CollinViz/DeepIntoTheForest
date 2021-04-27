@@ -39,6 +39,9 @@ func _ready():
 	ShopItemsCanHave.push_back({"name":"Flash in pan","description":"Improve Stamina","cost":50,"itemName":"MaxStamina"})
 	ShopItemsCanHave.push_back({"name":"Floating Shield","description":"Shield of protection","cost":50,"itemName":"shelled"})
 	
+	
+	
+	
 
 func getShopItems()->Array:
 	ShopItemsCanHave.shuffle()
@@ -68,6 +71,8 @@ func GoingThroughDoor(DoorName:String):
 	if DoorName=="restart":
 		CurrentRoomIndex =0
 		CurrentRoom = level01[0]
+		for c in level01:
+			c.clear = false
 		emit_signal("changeLevel",CurrentRoom)
 	if(CurrentRoom.has(DoorName)):
 		if CurrentRoomIndex>0:
@@ -84,3 +89,5 @@ func BackToNextDoor():
 func restart():
 	CurrentRoom = level01[0]
 	GoingThroughDoor("restart")
+
+
